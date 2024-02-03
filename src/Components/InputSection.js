@@ -25,7 +25,7 @@ const InputSection = () => {
 
     const handleNumberOfPeopleInputChange = (e) => {
         let newValue = e.target.value
-        if (newValue == "") {
+        if ((newValue == "") || (newValue == " ")) {
             setInputOutputValues(prevState => ({
                 ...prevState,
                 numberOfPeople: ""
@@ -46,7 +46,7 @@ const InputSection = () => {
             btnActive: "",
         }));
         let newValue = e.target.value
-        if (newValue == "") {
+        if ((newValue == "") || (newValue == " ")) {
             setInputOutputValues(prevState => ({
                 ...prevState,
                 customTip: "",
