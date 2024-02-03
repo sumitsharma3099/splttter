@@ -156,7 +156,7 @@ const InputSection = () => {
                     <div className="relative flex items-center self-stretch">
                         <input
                             type="text"
-                            className={"bg-[#e8e8e8] self-stretch font-ibm-plex-mono font-semibold text-3xl text-darkslategray-300 gap-[20px] max-w-full h-12 rounded-lg focus:outline-none text-right pl-[8.25rem] pr-[2.75rem] " + (!inputOutputValues.billInputError ? "border-[2px] border-solid border-lightseagreen-100" : "border-[2px] border-solid border-red-500")}
+                            className={"bg-[#e8e8e8] self-stretch font-ibm-plex-mono font-semibold text-3xl text-darkslategray-300 gap-[20px] max-w-full h-12 rounded-lg focus:outline-none text-right pr-[2.75rem] " + (!inputOutputValues.billInputError ? "border-[2px] border-solid border-lightseagreen-100" : "border-[2px] border-solid border-red-500")}
                             placeholder="0"
                             name="handleBillAmountInputChange"
                             id="handleBillAmountInputChange"
@@ -179,38 +179,33 @@ const InputSection = () => {
                 </div>
                 <div className="flex flex-row items-start justify-start py-0 px-1 box-border min-h-[141px] max-w-full text-right text-5xl text-darkslategray-300">
                     <div className="w-[450px] flex flex-row flex-wrap items-start justify-center gap-[22px_21px] min-h-[126px] max-w-full z-[1]">
-                        <button className={"cursor-pointer [border:none] pt-[17px] pb-4 pr-14 pl-[52px] rounded-3xs flex flex-row items-center justify-center hover:bg-teal " + (inputOutputValues.btnActive == 5 ? "bg-paleturquoise-200" : "bg-darkslategray-300")}
-                            onClick={() => calculateTipAndTotalAmount(5)}>
-                            <div className={"h-[52px] w-[134.9px] relative rounded-3xs hidden " + (inputOutputValues.btnActive == 5 ? "bg-paleturquoise-200" : "bg-darkslategray-300")} />
-                            <div className={"relative text-5xl leading-[20px] font-semibold font-ibm-plex-mono text-left z-[1] mq450:text-lgi mq450:leading-[16px] " + (inputOutputValues.btnActive == 5 ? "text-darkslategray-300" : "text-white")}>
+                        <button className={`cursor-pointer border-none pt-[17px] pb-4 pr-14 pl-[52px] rounded-3xs flex items-center justify-center hover:bg-teal ${inputOutputValues.btnActive === 5 ? "bg-paleturquoise-200" : "bg-darkslategray-300"}`} onClick={() => calculateTipAndTotalAmount(5)}>
+                            <div className={`h-[52px] w-[134.9px] relative rounded-3xs hidden ${inputOutputValues.btnActive === 5 ? "bg-paleturquoise-200" : "bg-darkslategray-300"}`} />
+                            <div className={`relative text-5xl leading-[20px] font-semibold font-ibm-plex-mono text-left z-[1] mq450:text-lgi mq450:leading-[16px] ${inputOutputValues.btnActive === 5 ? "text-darkslategray-300" : "text-white"}`}>
                                 5%
                             </div>
                         </button>
-                        <button className={"cursor-pointer [border:none] pt-[17px] pb-4 pr-14 pl-[52px] rounded-3xs flex flex-row items-center justify-center hover:bg-teal " + (inputOutputValues.btnActive == 10 ? "bg-paleturquoise-200" : "bg-darkslategray-300")}
-                            onClick={() => calculateTipAndTotalAmount(10)}>
-                            <div className={"h-[52px] w-[134.9px] relative rounded-3xs hidden " + (inputOutputValues.btnActive == 10 ? "bg-paleturquoise-200" : "bg-darkslategray-300")} />
-                            <div className={"relative text-5xl leading-[20px] font-semibold font-ibm-plex-mono text-left z-[1] mq450:text-lgi mq450:leading-[16px] " + (inputOutputValues.btnActive == 10 ? "text-darkslategray-300" : "text-white")}>
+                        <button className={`cursor-pointer border-none pt-[17px] pb-4 pr-14 pl-[52px] rounded-3xs flex items-center justify-center hover:bg-teal ${inputOutputValues.btnActive === 10 ? "bg-paleturquoise-200" : "bg-darkslategray-300"}`} onClick={() => calculateTipAndTotalAmount(10)}>
+                            <div className={`h-[52px] w-[134.9px] relative rounded-3xs hidden ${inputOutputValues.btnActive === 10 ? "bg-paleturquoise-200" : "bg-darkslategray-300"}`} />
+                            <div className={`relative text-5xl leading-[20px] font-semibold font-ibm-plex-mono text-left z-[1] mq450:text-lgi mq450:leading-[16px] ${inputOutputValues.btnActive === 10 ? "text-darkslategray-300" : "text-white"}`}>
                                 10%
                             </div>
                         </button>
-                        <button className={"cursor-pointer [border:none] pt-[17px] pb-4 pr-14 pl-[52px] rounded-3xs flex flex-row items-center justify-center hover:bg-teal " + (inputOutputValues.btnActive == 15 ? "bg-paleturquoise-200" : "bg-darkslategray-300")}
-                            onClick={() => calculateTipAndTotalAmount(15)}>
-                            <div className={"h-[52px] w-[134.9px] relative rounded-3xs hidden " + (inputOutputValues.btnActive == 15 ? "bg-paleturquoise-200" : "bg-darkslategray-300")} />
-                            <div className={"relative text-5xl leading-[20px] font-semibold font-ibm-plex-mono text-left z-[1] mq450:text-lgi mq450:leading-[16px] " + (inputOutputValues.btnActive == 15 ? "text-darkslategray-300" : "text-white")}>
+                        <button className={`cursor-pointer border-none pt-[17px] pb-4 pr-14 pl-[52px] rounded-3xs flex items-center justify-center hover:bg-teal ${inputOutputValues.btnActive === 15 ? "bg-paleturquoise-200" : "bg-darkslategray-300"}`} onClick={() => calculateTipAndTotalAmount(15)}>
+                            <div className={`h-[52px] w-[134.9px] relative rounded-3xs hidden ${inputOutputValues.btnActive === 15 ? "bg-paleturquoise-200" : "bg-darkslategray-300"}`} />
+                            <div className={`relative text-5xl leading-[20px] font-semibold font-ibm-plex-mono text-left z-[1] mq450:text-lgi mq450:leading-[16px] ${inputOutputValues.btnActive === 15 ? "text-darkslategray-300" : "text-white"}`}>
                                 15%
                             </div>
                         </button>
-                        <button className={"cursor-pointer [border:none] pt-[17px] pb-4 pr-14 pl-[52px] rounded-3xs flex flex-row items-center justify-center hover:bg-teal " + (inputOutputValues.btnActive == 25 ? "bg-paleturquoise-200" : "bg-darkslategray-300")}
-                            onClick={() => calculateTipAndTotalAmount(25)}>
-                            <div className={"h-[52px] w-[134.9px] relative rounded-3xs hidden " + (inputOutputValues.btnActive == 25 ? "bg-paleturquoise-200" : "bg-darkslategray-300")} />
-                            <div className={"relative text-5xl leading-[20px] font-semibold font-ibm-plex-mono text-left z-[1] mq450:text-lgi mq450:leading-[16px] " + (inputOutputValues.btnActive == 25 ? "text-darkslategray-300" : "text-white")}>
+                        <button className={`cursor-pointer border-none pt-[17px] pb-4 pr-14 pl-[52px] rounded-3xs flex items-center justify-center hover:bg-teal ${inputOutputValues.btnActive === 25 ? "bg-paleturquoise-200" : "bg-darkslategray-300"}`} onClick={() => calculateTipAndTotalAmount(25)}>
+                            <div className={`h-[52px] w-[134.9px] relative rounded-3xs hidden ${inputOutputValues.btnActive === 25 ? "bg-paleturquoise-200" : "bg-darkslategray-300"}`} />
+                            <div className={`relative text-5xl leading-[20px] font-semibold font-ibm-plex-mono text-left z-[1] mq450:text-lgi mq450:leading-[16px] ${inputOutputValues.btnActive === 25 ? "text-darkslategray-300" : "text-white"}`}>
                                 25%
                             </div>
                         </button>
-                        <button className={"cursor-pointer [border:none] pt-[17px] pb-4 pr-14 pl-[52px] rounded-3xs flex flex-row items-center justify-center hover:bg-teal " + (inputOutputValues.btnActive == 50 ? "bg-paleturquoise-200" : "bg-darkslategray-300")}
-                            onClick={() => calculateTipAndTotalAmount(50)}>
-                            <div className={"h-[52px] w-[134.9px] relative rounded-3xs hidden " + (inputOutputValues.btnActive == 50 ? "bg-paleturquoise-200" : "bg-darkslategray-300")} />
-                            <div className={"relative text-5xl leading-[20px] font-semibold font-ibm-plex-mono text-left z-[1] mq450:text-lgi mq450:leading-[16px] " + (inputOutputValues.btnActive == 50 ? "text-darkslategray-300" : "text-white")}>
+                        <button className={`cursor-pointer border-none pt-[17px] pb-4 pr-14 pl-[52px] rounded-3xs flex items-center justify-center hover:bg-teal ${inputOutputValues.btnActive === 50 ? "bg-paleturquoise-200" : "bg-darkslategray-300"}`} onClick={() => calculateTipAndTotalAmount(50)}>
+                            <div className={`h-[52px] w-[134.9px] relative rounded-3xs hidden ${inputOutputValues.btnActive === 50 ? "bg-paleturquoise-200" : "bg-darkslategray-300"}`} />
+                            <div className={`relative text-5xl leading-[20px] font-semibold font-ibm-plex-mono text-left z-[1] mq450:text-lgi mq450:leading-[16px] ${inputOutputValues.btnActive === 50 ? "text-darkslategray-300" : "text-white"}`}>
                                 50%
                             </div>
                         </button>
@@ -242,7 +237,7 @@ const InputSection = () => {
                     <div className="relative flex items-center self-stretch">
                         <input
                             type="text"
-                            className={"bg-[#e8e8e8] self-stretch font-ibm-plex-mono font-semibold text-3xl text-darkslategray-300 gap-[20px] max-w-full h-12 rounded-lg focus:outline-none text-right pl-[8.25rem] pr-[2.75rem] " +
+                            className={"bg-[#e8e8e8] self-stretch font-ibm-plex-mono font-semibold text-3xl text-darkslategray-300 gap-[20px] max-w-full h-12 rounded-lg focus:outline-none text-right pr-[2.75rem] " +
                                 (!inputOutputValues.numberOfPeopleError ? "border-[2px] border-solid border-lightseagreen-100" : "border-[2px] border-solid border-red-500")}
                             placeholder="0"
                             value={inputOutputValues.numberOfPeople}
